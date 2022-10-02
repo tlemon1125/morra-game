@@ -19,13 +19,11 @@ reach.setWalletFallback(reach.walletFallback({
 const intToOutcome = ['Alice Wins!', 'Draws!', 'Bob Wins!']; //declare the outcome
 const {standardUnit} = reach;
 const defaults = {defaultFundAmt: '10', defaultWager: '3', standardUnit}; //set default value
-
-//Parent Component (The whole js using the wrapper method)
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            view: 'ConnectAccount', //Get the view from AppView.js, after that pass it to render.js and use renderView() it
+            view: 'ConnectAccount',
             ...defaults
         };
     }
@@ -91,13 +89,9 @@ class Player extends React.Component {
             });
         });
 
-        console.log(hand);
-
         this.setState({
             hand
         });
-
-        console.log(this);
 
         return hand;
     }
@@ -115,8 +109,6 @@ class Player extends React.Component {
             view:'WaitingForResults',
             guess
         });
-
-        console.log(this);
 
         return guess;
     }

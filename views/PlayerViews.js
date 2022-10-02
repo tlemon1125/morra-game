@@ -15,18 +15,6 @@ exports.GetHand = class extends React.Component {
         <br />
         {!playable ? 'Please wait...' : ''}
         <br />
-        {/* <button
-          disabled={!playable}
-          onClick={() => parent.playHand('ROCK')}
-        >Rock</button>
-        <button
-          disabled={!playable}
-          onClick={() => parent.playHand('PAPER')}
-        >Paper</button>
-        <button
-          disabled={!playable}
-          onClick={() => parent.playHand('SCISSORS')}
-        >Scissors</button> */}
         <input type="number" onChange={(e) => this.setState({_hand: e.currentTarget.value})} max={5} min={0} placeholder={0} />
         {console.log(_hand)}
         <button onClick={() => parent.playHand(_hand)}>Submit</button>
@@ -45,18 +33,6 @@ exports.GetGuess = class extends React.Component {
         <br />
         {!playable ? 'Please wait...' : ''}
         <br />
-        {/* <button
-          disabled={!playable}
-          onClick={() => parent.playHand('ROCK')}
-        >Rock</button>
-        <button
-          disabled={!playable}
-          onClick={() => parent.playHand('PAPER')}
-        >Paper</button>
-        <button
-          disabled={!playable}
-          onClick={() => parent.playHand('SCISSORS')}
-        >Scissors</button> */}
         <input type="number" onChange={(e) => this.setState({_guess: e.currentTarget.value})} max={10} min={0} placeholder={0} />
         {console.log(_guess)}
         <button onClick={() => parent.playGuess(_guess)}>Submit</button>
